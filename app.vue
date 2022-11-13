@@ -1,5 +1,6 @@
 <script setup lang="ts">
   const app = useAppConfig();
+  const localeUserSetting = useCookie("locale");
 
   useHead({
     title: app.name,
