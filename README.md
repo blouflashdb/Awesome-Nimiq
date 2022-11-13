@@ -1,10 +1,6 @@
-# Nuxt 3 Starter
+# Awesome Nimiq
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
-## Features
-
-- [x] ✨ Eslint & Prettier
+Look at the [Nimiq project](https://github.com/nimiq) to learn more.
 
 ## Setup
 
