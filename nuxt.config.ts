@@ -1,3 +1,5 @@
+import svgLoader from "vite-svg-loader";
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   experimental: {
@@ -9,4 +11,8 @@ export default defineNuxtConfig({
   },
 
   css: ["@nimiq/style", "~/assets/fonts/fonts.scss"],
+
+  vite: {
+    plugins: [svgLoader()],
+  },
 });
