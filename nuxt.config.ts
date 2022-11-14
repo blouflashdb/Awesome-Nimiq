@@ -1,6 +1,6 @@
-import svgLoader from "vite-svg-loader";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "url";
+import svgLoader from "vite-svg-loader";
 import VueI18nVitePlugin from "@intlify/unplugin-vue-i18n/vite";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config

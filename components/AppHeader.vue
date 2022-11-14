@@ -14,5 +14,5 @@
 </template>
 
 <script lang="ts" setup>
-  const { localeSetting } = useLocaleUserSetting();
+  const localeSetting = useState<string>("locale");
 </script>

@@ -20,5 +20,7 @@ export const useLocaleUserSetting = () => {
     locale.value = getUserLocale();
   };
 
-  return { localeSetting, initLang };
+  onBeforeMount(() => initLang());
+
+  return localeSetting;
 };
