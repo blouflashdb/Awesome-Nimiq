@@ -5,10 +5,14 @@
       <label for="locale-select">{{ $t("language") }}: </label>
       <select
         id="locale-select"
-        v-model="$i18n.locale">
+        v-model="localeUserSetting">
         <option value="en">en</option>
         <option value="de">de</option>
       </select>
     </form>
   </header>
 </template>
+
+<script lang="ts" setup>
+  const localeUserSetting = useLocaleUserSetting();
+</script>

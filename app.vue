@@ -1,6 +1,6 @@
 <script setup lang="ts">
   const app = useAppConfig();
-  const localeUserSetting = useCookie("locale");
+  const localeUserSetting = useLocaleUserSetting();
 
   useHead({
     title: app.name,
@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <Html>
+  <Html :lang="localeUserSetting">
     <Body>
       <NuxtLayout>
         <NuxtLoadingIndicator
