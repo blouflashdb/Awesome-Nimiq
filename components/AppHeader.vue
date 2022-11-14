@@ -5,7 +5,7 @@
       <label for="locale-select">{{ $t("language") }}: </label>
       <select
         id="locale-select"
-        v-model="localeUserSetting">
+        v-model="localeSetting">
         <option value="en">en</option>
         <option value="de">de</option>
       </select>
@@ -14,5 +14,5 @@
 </template>
 
 <script lang="ts" setup>
-  const localeUserSetting = useLocaleUserSetting();
+  const { localeSetting } = useLocaleUserSetting();
 </script>

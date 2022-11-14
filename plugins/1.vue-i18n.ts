@@ -4,11 +4,11 @@ import de from "../locales/de.json";
 
 export default defineNuxtPlugin(({ vueApp }) => {
   const app = useAppConfig();
-  const localeUserSetting = useCookie("locale") || app.defaultLanguage;
+  const localeUserSetting = useCookie("locale");
   const i18n = createI18n({
     legacy: false,
     globalInjection: true,
-    locale: localeUserSetting.value,
+    locale: localeUserSetting.value || app.defaultLanguage,
     messages: {
       en,
       de,

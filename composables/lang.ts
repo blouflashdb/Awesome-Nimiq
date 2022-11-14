@@ -3,25 +3,22 @@ import { useI18n } from "vue-i18n";
 export const useLocaleUserSetting = () => {
   const app = useAppConfig();
   const { locale } = useI18n({ useScope: "global" });
-  const localeUserSetting = useCookie("locale") || app.defaultLanguage;
+  const localeUserSetting = useCookie("locale");
 
-  const localeSetting = useState<string>(
-    "locale",
-    () => localeUserSetting.value
-  );
+  const getUserLocale = (): string =>
+    localeUserSetting.value || app.defaultLanguage;
+
+  const localeSetting = useState<string>("locale", () => getUserLocale());
 
   watch(localeSetting, (localeSetting) => {
     localeUserSetting.value = localeSetting;
     locale.value = localeSetting;
   });
 
-  const init = () => {
-    localeSetting.value = localeUserSetting.value;
-    locale.value = localeSetting.value;
+  const initLang = () => {
+    localeUserSetting.value = getUserLocale();
+    locale.value = getUserLocale();
   };
 
-  // lifecycle
-  onBeforeMount(() => init());
-
-  return localeSetting;
+  return { localeSetting, initLang };
 };
