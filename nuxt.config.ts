@@ -20,10 +20,12 @@ export default defineNuxtConfig({
       {
         code: "en",
         iso: "en-US",
+        name: "lang_english",
       },
       {
         code: "de",
         iso: "de-DE",
+        name: "lang_german",
       },
     ],
     defaultLocale: "en",

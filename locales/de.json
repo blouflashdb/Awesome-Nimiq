@@ -1,4 +1,6 @@
 {
   "hello": "Hallo, {name}!",
-  "language": "Sprache"
+  "language": "Sprache",
+  "lang_english": "Englisch",
+  "lang_german": "Deutsch"
 }
