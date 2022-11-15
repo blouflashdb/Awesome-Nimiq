@@ -1,6 +1,13 @@
 # Awesome Nimiq
 
+Nuxt 3 + Tailwind Starter Kit.
 Look at the [Nimiq project](https://github.com/nimiq) to learn more.
+
+## Features
+
+- [Nuxt 3](https://v3.nuxtjs.org/) (RC.13)
+- [Tailwind CSS](https://tailwindcss.com/)
+- Internalization via [@nuxtjs/i18n](https://v8.i18n.nuxtjs.org/)
 
 ## Setup
 

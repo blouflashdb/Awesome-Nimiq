@@ -5,5 +5,9 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnType": false,
-  "volar.takeOverMode.enabled": "auto"
+  "volar.takeOverMode.enabled": "auto",
+  "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }

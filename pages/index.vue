@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h1>Welcome to the homepage</h1>
-    <AppAlert> This is an auto-imported component </AppAlert>
-    <NimiqIcon icon-name="nq-ledger" />
+    <h1 class="text-3xl font-bold underline">
+      {{ $t("hello", { name: "vue-i18n" }) }}
+    </h1>
+    <NimiqIcon icon-name="nq-ledger"></NimiqIcon>
   </div>
 </template>

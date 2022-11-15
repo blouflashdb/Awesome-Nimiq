@@ -1,5 +1,6 @@
 {
   "vueIndentScriptAndStyle": true,
   "bracketSameLine": true,
-  "singleAttributePerLine": true
+  "singleAttributePerLine": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

@@ -1,15 +1,5 @@
-<script setup lang="ts">
-  const app = useAppConfig();
-  const localeSetting = useLocaleUserSetting();
-
-  useHead({
-    title: app.name,
-    titleTemplate: "%s - Nuxt 3 Starter",
-  });
-</script>
-
 <template>
-  <Html :lang="localeSetting">
+  <Html>
     <Body>
       <NuxtLayout>
         <NuxtLoadingIndicator

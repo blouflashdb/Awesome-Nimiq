@@ -1,19 +1,47 @@
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "url";
-import svgLoader from "vite-svg-loader";
 import VueI18nVitePlugin from "@intlify/unplugin-vue-i18n/vite";
+import svgLoader from "vite-svg-loader";
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+import en from "./locales/en.json";
+import de from "./locales/de.json";
+
 export default defineNuxtConfig({
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
+
   experimental: {
     reactivityTransform: false,
   },
-  typescript: {
-    strict: true,
-    typeCheck: true,
-  },
 
-  css: ["@nimiq/style", "~/assets/fonts/fonts.scss"],
+  css: ["@/assets/fonts/fonts.scss", "@nimiq/style"],
+
+  i18n: {
+    locales: [
+      {
+        code: "en",
+        iso: "en-US",
+      },
+      {
+        code: "de",
+        iso: "de-DE",
+      },
+    ],
+    defaultLocale: "en",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+      alwaysRedirect: true,
+    },
+    vueI18n: {
+      legacy: false,
+      locale: "en",
+      messages: {
+        en,
+        de,
+      },
+    },
+  },
 
   vite: {
     resolve: {
