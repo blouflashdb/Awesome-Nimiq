@@ -29,7 +29,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "nuxt": "3.0.0-rc.13",
+    "nuxt": "^3.0.0",
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "sass": "^1.56.1",
