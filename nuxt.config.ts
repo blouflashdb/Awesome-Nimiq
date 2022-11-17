@@ -9,6 +9,10 @@ export default defineNuxtConfig({
 
   css: ["@/assets/fonts/fonts.scss", "@nimiq/style"],
 
+  tailwindcss: {
+    injectPosition: "first",
+  },
+
   i18n: {
     locales: [
       {

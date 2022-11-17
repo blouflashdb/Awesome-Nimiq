@@ -1,3 +1,4 @@
+/* gets injected into nuxtjs global css via @nuxtjs/tailwindcss */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
