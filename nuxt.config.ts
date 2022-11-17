@@ -1,10 +1,4 @@
-import { resolve, dirname } from "node:path";
-import { fileURLToPath } from "url";
-import VueI18nVitePlugin from "@intlify/unplugin-vue-i18n/vite";
 import svgLoader from "vite-svg-loader";
-
-import en from "./locales/en.json";
-import de from "./locales/de.json";
 
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
@@ -21,43 +15,26 @@ export default defineNuxtConfig({
         code: "en",
         iso: "en-US",
         name: "lang_english",
+        file: "en.json",
       },
       {
         code: "de",
         iso: "de-DE",
         name: "lang_german",
+        file: "de.json",
       },
     ],
+    langDir: "locales/",
     defaultLocale: "en",
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: "i18n_redirected",
-      redirectOn: "root",
+      cookieKey: "locale",
+      redirectOn: "root", // recommended
       alwaysRedirect: true,
-    },
-    vueI18n: {
-      legacy: false,
-      locale: "en",
-      messages: {
-        en,
-        de,
-      },
     },
   },
 
   vite: {
-    resolve: {
-      alias: {
-        "vue-i18n": "vue-i18n/dist/vue-i18n.runtime.esm-bundler.js",
-      },
-    },
-    plugins: [
-      svgLoader(),
-      VueI18nVitePlugin({
-        include: [
-          resolve(dirname(fileURLToPath(import.meta.url)), "./locales/*.json"),
-        ],
-      }),
-    ],
+    plugins: [svgLoader()],
   },
 });
